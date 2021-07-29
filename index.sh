@@ -1,6 +1,6 @@
 set -ex
 echo "build path "${build_path}""
-echo "${GITHUB_WORKSPACE}"
+
 
 curl --location --request POST 'https://api.sofy.ai/api/AppTests/buildUpload' \
 --header "SubscriptionKey: ${subscription_key}" \
