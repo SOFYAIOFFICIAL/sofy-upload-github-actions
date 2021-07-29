@@ -1,0 +1,14 @@
+on: [push]
+
+jobs:
+  hello_world_job:
+    runs-on: ubuntu-latest
+    name: Upload build to sofy
+    env:
+      build_path: '/home/runner/work/_actions/SOFYAIOFFICIAL/sofy-upload-github-actions/master/fb.apk'
+      subscription_key: e570e948-0661-4481-8728-3b82ea0399a2
+
+    steps:
+      - uses: actions/checkout@v2
+      - id: testing
+        uses: SOFYAIOFFICIAL/sofy-upload-github-actions@master
