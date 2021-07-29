@@ -9,5 +9,6 @@ jobs:
       subscription_key: 80b30c4e-c920-40a7-9682-6ad2e779a67f
 
     steps:
+      - uses: actions/checkout@v2
       - id: testing
         uses: SOFYAIOFFICIAL/sofy-upload-github-actions@main
