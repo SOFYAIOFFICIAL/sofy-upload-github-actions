@@ -6,9 +6,8 @@ jobs:
     name: Upload build to sofy
     env:
       build_path: '/home/runner/work/_actions/SOFYAIOFFICIAL/sofy-upload-github-actions/main/fb.apk'
-      subscription_key: e570e948-0661-4481-8728-3b82ea0399a2
+      subscription_key: 80b30c4e-c920-40a7-9682-6ad2e779a67f
 
     steps:
-      - uses: actions/checkout@v2
       - id: testing
         uses: SOFYAIOFFICIAL/sofy-upload-github-actions@main
