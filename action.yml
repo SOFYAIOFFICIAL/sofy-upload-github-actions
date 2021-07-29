@@ -1,0 +1,19 @@
+  
+name: 'sofy upload'
+description: 'upload build to sofy'
+inputs:
+  build_path:  
+    description: 'Build Path of your build file(.apk file or .ipa file)'
+    required: true
+  subscription_key:
+    description: 'You are required to enter Subscription key'
+    required: true
+runs:
+  using: "composite"
+  steps:
+    - run: echo  ${{ inputs.build_path }}.
+      shell: bash
+    - run: chmod +x ${{ github.action_path }}/index.sh
+      shell: bash
+    - run: ${{ github.action_path }}/index.sh
+      shell: bash  
