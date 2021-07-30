@@ -16,4 +16,7 @@ runs:
     - run: chmod +x ${{ github.action_path }}/index.sh
       shell: bash
     - run: ${{ github.action_path }}/index.sh
-      shell: bash  
+      shell: bash
+branding:
+  icon: 'check-circle'
+  color: 'green'      
