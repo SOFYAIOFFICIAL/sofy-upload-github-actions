@@ -1,14 +1,12 @@
 on: [push]
 
-jobs:
-  hello_world_job:
+jobs:  
+  Uploading-job:  
+    name: 'Upload build on Sofy'
     runs-on: ubuntu-latest
-    name: Upload build to sofy
-    env:
-      build_path: '/home/runner/work/_actions/SOFYAIOFFICIAL/sofy-upload-github-actions/main/Byte.ipa'
-      subscription_key: 80b30c4e-c920-40a7-9682-6ad2e779a67f
-
     steps:
-      - uses: actions/checkout@v2
-      - id: testing
-        uses: SOFYAIOFFICIAL/sofy-upload-github-actions@main
+      - name: 'Upload build'
+        env:
+          build_path: '/home/runner/work/_actions/SOFYAIOFFICIAL/sofy-upload-github-actions/main/Byte.ipa'
+          subscription_key: 80b30c4e-c920-40a7-9682-6ad2e779a67f
+        uses: 'SOFYAIOFFICIAL/sofy-upload-github-actions@main'        
