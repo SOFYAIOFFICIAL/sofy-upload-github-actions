@@ -12,8 +12,20 @@ Makesure your build(.apk file or .ipa file) is created in the same remote reposi
 
 Find your subscription key by logging into Sofy, going to Account Settings --> API Key section.
 
+## Usage
 
-## Usage and Sample Workflow
+Add the following step action in your workflow.
+```yaml
+
+- name: 'Upload build'
+  env:
+    build_path: 'Path/to/your/build(.apk or .ipa)'
+    subscription_key: Your subscription key
+  uses: 'SOFYAIOFFICIAL/sofy-upload-github-actions@main'
+
+```
+
+## Sample Workflow
 
 Following is the sample workflow. Makesure to provide build path and subscription key as environment variable inputs in your workflow.
 ```yaml
