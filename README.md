@@ -6,7 +6,8 @@ You are required to provide the Build Path and Subscription key.
 
 ## Build Path
 
-Makesure your build(.apk file or .ipa file) is created in the same remote repository. You are required to input the build path of your build. Sample build path: '/home/runner/work/_actions/SOFYAIOFFICIAL/sofy-upload-github-actions/main/Byte.ipa' 
+Makesure your build(.apk file or .ipa file) is created in the same remote repository. You are required to input the build path of your build. Sample build path: '/home/runner/work/_actions/SOFYAIOFFICIAL/sofy-upload-github-actions/main/Byte.ipa'.
+
 Note: Don't provide local path of your build, it should be the remote path of your build.
 
 ## Subscription Key
