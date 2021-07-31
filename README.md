@@ -6,7 +6,7 @@ You are required to provide the Build Path and Subscription key.
 
 ## Build Path
 
-Makesure your build(.apk file or .ipa file) is created in the same remote repository. You are required to input the build path of your build. Sample build path: '/home/runner/work/_actions/SOFYAIOFFICIAL/sofy-upload-github-actions/main/Byte.ipa'.
+Makesure your build(.apk file or .ipa file) is created in the same remote repository. You are required to input the build path of your build. You can copy the path by opening your file at github repository, click on the three dots (...) and select copy path.
 
 Note: Don't provide local path of your build, it should be the remote path of your build.
 
@@ -16,9 +16,11 @@ Find your subscription key by logging into Sofy, going to Account Settings --> A
 
 ## Usage
 
-Add the following step action in your workflow.
-```yaml
+Add the following step action in your workflow. Makesure to add checkout action (checks-out your repository under $GITHUB_WORKSPACE, so your workflow can access it) as mentioned below.
 
+```yaml
+- name: 'checkout'
+  uses: 'actions/checkout@v2'
 - name: 'Upload build'
   env:
     build_path: 'Path/to/your/build(.apk or .ipa)'
@@ -29,7 +31,8 @@ Add the following step action in your workflow.
 
 ## Sample Workflow
 
-Following is the sample workflow. Makesure to provide build path and subscription key as environment variable inputs in your workflow.
+Following is the sample workflow. Makesure to provide build path and subscription key as environment variable inputs in your workflow. Also add the checkout action before sofy upload action.
+
 ```yaml
 jobs:  
   Uploading-job:  
@@ -40,7 +43,8 @@ jobs:
          #...
          #... (generate .apk or .ipa)
          #...
-         
+      - name: 'checkout'
+        uses: 'actions/checkout@v2'
       - name: 'Upload build'
         env:
           build_path: 'Path/to/your/build(.apk or .ipa)'
