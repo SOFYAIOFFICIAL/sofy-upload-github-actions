@@ -7,6 +7,6 @@ jobs:
     steps:
       - name: 'Upload build'
         env:
-          build_path: '/home/runner/work/_actions/SOFYAIOFFICIAL/sofy-upload-github-actions/main/Byte.ipa'
+          build_path: 'Byte.ipa'
           subscription_key: 80b30c4e-c920-40a7-9682-6ad2e779a67f
         uses: 'SOFYAIOFFICIAL/sofy-upload-github-actions@main'        
