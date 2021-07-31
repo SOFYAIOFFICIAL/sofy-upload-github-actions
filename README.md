@@ -16,7 +16,7 @@ Find your subscription key by logging into Sofy, going to Account Settings --> A
 
 ## Usage
 
-Add the following step action in your workflow. Makesure to add checkout action (checks-out your repository under $GITHUB_WORKSPACE, so your workflow can access it) as mentioned below.
+Add the following step action in your workflow. Makesure to add checkout action before sofy upload action as mentioned below. The purpose of using Checkout action is to checks-out your repository under $GITHUB_WORKSPACE, so your workflow can access it.
 
 ```yaml
 - name: 'checkout'
